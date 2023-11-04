@@ -12,7 +12,7 @@ export default function Counter(props) {
         setCount(0)
     }
 
-    //Not so good practice
+//Not so good practice
 
     // if(count < 0) {
     //     return(
@@ -22,20 +22,29 @@ export default function Counter(props) {
     //     )
     // }
 
-    let warning = null;
+//slightly better 
+    // let warning = null;
 
-    if(count < 0) {
-        warning = <h2>Kakvi igri4ki si igrae6?</h2>
-    }
-    if(count < -3) {
-        warning = <h1>Nqma takava naglost!</h1>
-    }
+    // if(count < 0) {
+    //     warning = <h2>Kakvi igri4ki si igrae6?</h2>
+    // }
+    // if(count < -3) {
+    //     warning = <h1>Nqma takava naglost!</h1>
+    // }
+
 
     return (
         <div>
             <h3>Counter</h3>
+{/* Conditional rendering with if operators */}
+            {count < 0
+            ? <h2>Kakvi igri4ki si igrae6?</h2>
+            : <h2>Good! Good!</h2>
+            }
+{/* Conditional rendering with boolean operator */}
+            {count == 0 && <p>Please start counting!</p>}
 
-            {warning}
+
             <p>Count: {count}</p>
 
             <button onClick={incrementClickHandler}>+</button>
