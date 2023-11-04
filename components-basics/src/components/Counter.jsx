@@ -12,18 +12,30 @@ export default function Counter(props) {
         setCount(0)
     }
 
+    //Not so good practice
+
+    // if(count < 0) {
+    //     return(
+    //         <div>
+    //             <h1>Kakvi igri4ki si igrae6?</h1>
+    //         </div>
+    //     )
+    // }
+
+    let warning = null;
+
     if(count < 0) {
-        return(
-            <div>
-                <h1>Kakvi igri4ki si igrae6?</h1>
-            </div>
-        )
+        warning = <h2>Kakvi igri4ki si igrae6?</h2>
+    }
+    if(count < -3) {
+        warning = <h1>Nqma takava naglost!</h1>
     }
 
     return (
         <div>
             <h3>Counter</h3>
 
+            {warning}
             <p>Count: {count}</p>
 
             <button onClick={incrementClickHandler}>+</button>
