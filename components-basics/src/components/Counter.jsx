@@ -12,6 +12,14 @@ export default function Counter(props) {
         setCount(0)
     }
 
+    if(count < 0) {
+        return(
+            <div>
+                <h1>Kakvi igri4ki si igrae6?</h1>
+            </div>
+        )
+    }
+
     return (
         <div>
             <h3>Counter</h3>
