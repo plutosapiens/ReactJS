@@ -3,9 +3,11 @@ import { useState } from "react";
 export default function Counter(props) {
     const [count, setCount] = useState(0);
 
+    //Best practice: Use the functional form of setState when updating state based on the previous state
     const incrementClickHandler = () => {
-        setCount (count +1)
+        setCount (oldValue => oldValue + 1)
     }
+    //Use this when you don't care what the previous state was
     const clearCounterHandler = () => {
         setCount(0)
     }
