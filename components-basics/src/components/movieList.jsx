@@ -1,5 +1,5 @@
-import Movie from "./movie";
-import Heading from "./heading";
+import Movie from "./Movie";
+import Heading from "./Heading";
 
 export default function MovieList(props) {
     return (
