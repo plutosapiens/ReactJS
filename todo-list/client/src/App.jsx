@@ -5,19 +5,16 @@ import TodoList from "./components/TodoList";
 function App() {
   return (
     <div>
-      <body>
 
     <Header />
 
-{/* <!-- Main content --> */}
-<main className="main">
+    <main className="main">
 
-    <TodoList />
-</main>
+      <TodoList />
+
+    </main>
 
     <Footer />
-
-</body>
     </div>
   )
 }
